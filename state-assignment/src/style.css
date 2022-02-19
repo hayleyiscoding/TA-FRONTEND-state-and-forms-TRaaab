@@ -364,7 +364,8 @@ img {
 .button--medium {
   font-size: 2.5rem;
 }
-button:hover {
+button:hover,
+.active {
   color: white;
   background-color: blue;
   cursor: pointer;
