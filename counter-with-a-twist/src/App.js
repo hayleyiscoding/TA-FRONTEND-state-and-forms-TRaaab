@@ -14,58 +14,76 @@ class App extends Component {
     return (
       <div className='container text-center'>
         <h1>Counter With a Twist</h1>
-        <h2>0</h2>
+        <h2>{this.state.counter}</h2>
         <div>
           <h3>First, choose the steps:</h3>
           <div className='flex center step-buttons'>
             <Button
               type={buttonTypes.SECONDARY}
               size={buttonSizes.MEDIUM}
-              label='5'
+              label={5}
               steps={this.state.steps}
               onClick={() =>
                 this.setState({
-                  steps: this.state.steps,
+                  steps: 5,
                 })
               }
             />
             <Button
               type={buttonTypes.SECONDARY}
               size={buttonSizes.MEDIUM}
-              label='10'
+              label={10}
               steps={this.state.steps}
               onClick={() =>
                 this.setState({
-                  steps: this.state.steps,
+                  steps: 10,
                 })
               }
             />
             <Button
               type={buttonTypes.SECONDARY}
               size={buttonSizes.MEDIUM}
-              label='15'
+              label={15}
               steps={this.state.steps}
               onClick={() =>
                 this.setState({
-                  steps: this.state.steps,
+                  steps: 15,
                 })
               }
             />
           </div>
         </div>
         <div className='flex center'>
-          {["Increment", "Decrement", "Reset"].map((text) => (
-            <Button
-              type={buttonTypes.PRIMARY}
-              size={buttonSizes.MEDIUM}
-              label={text}
-              onClick={() =>
-                this.setState({
-                  counter: this.state.counter + this.state.steps,
-                })
-              }
-            />
-          ))}
+          <Button
+            type={buttonTypes.PRIMARY}
+            size={buttonSizes.MEDIUM}
+            label='Increment'
+            onClick={() =>
+              this.setState({
+                counter: this.state.counter + this.state.steps,
+              })
+            }
+          />
+          <Button
+            type={buttonTypes.PRIMARY}
+            size={buttonSizes.MEDIUM}
+            label='Decrement'
+            onClick={() =>
+              this.setState({
+                counter: this.state.counter - this.state.steps,
+              })
+            }
+          />
+          <Button
+            type={buttonTypes.PRIMARY}
+            size={buttonSizes.MEDIUM}
+            label='Reset'
+            onClick={() =>
+              this.setState({
+                counter: 0,
+              })
+            }
+          />
         </div>
       </div>
     );

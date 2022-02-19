@@ -360,8 +360,15 @@ h3 {
 .step-buttons {
   padding-bottom: 3rem;
 }
-.button--secondary:hover,
-.button--secondary .active {
+.button--secondary:hover {
+  background-color: blue;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border: 1px solid transparent;
+}
+.active {
   background-color: blue;
   font-size: 2rem;
   color: white;
