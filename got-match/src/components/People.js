@@ -13,9 +13,15 @@ function People(props) {
             onClick={() => {
               props.updatePerson(person.name);
             }}
-            className={`${props.activePerson === person.name ? "active" : ""}`}
+            // className={`${props.activePerson === person.name ? "active" : ""}`}
           >
-            {person.name}
+            <p
+              className={`${
+                props.activePerson === person.name ? "active" : ""
+              }`}
+            >
+              {person.name}
+            </p>
           </li>
         );
       })}
