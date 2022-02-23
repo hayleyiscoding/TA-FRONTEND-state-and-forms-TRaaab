@@ -34,10 +34,11 @@ class App extends Component {
       );
 
       if (indexOfPeople === -1) {
-        alert("Sorry, not a match. Try Again!");
+        setTimeout(() => alert("Sorry, not a match. Try Again!"), 100);
         // this.setState({ activeHouse: "", activePerson: "" });
       } else {
-        alert("It's a match!!");
+        setTimeout(() => alert("It's a match!!"), 100);
+
         // this.setState({ activeHouse: "", activePerson: "" });
       }
     }

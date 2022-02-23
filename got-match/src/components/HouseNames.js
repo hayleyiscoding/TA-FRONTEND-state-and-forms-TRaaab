@@ -8,9 +8,11 @@ function HouseNames(props) {
         return (
           <li
             onClick={() => props.updateHouse(house)}
-            className={`${props.activeHouse === house ? "active" : ""}`}
+            // className={`${props.activeHouse === house ? "active" : ""}`}
           >
-            {house}
+            <p className={`${props.activeHouse === house ? "active" : ""}`}>
+              {house}
+            </p>
           </li>
         );
       })}
